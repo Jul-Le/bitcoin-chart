@@ -12327,7 +12327,6 @@ Source: www.kingbright.com</description>
 <class number="0" name="default" width="0.1524" drill="0.3">
 </class>
 <class number="1" name="test" width="0.1524" drill="0.4">
-<clearance class="1" value="0.3"/>
 </class>
 <class number="2" name="3v" width="0.1524" drill="0.3">
 </class>
@@ -12395,6 +12394,7 @@ Source: www.kingbright.com</description>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A3L-LOC" device=""/>
+<part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12632,6 +12632,9 @@ Source: www.kingbright.com</description>
 <attribute name="LAST_DATE_TIME" x="344.17" y="10.16" size="2.286" layer="94"/>
 <attribute name="SHEET" x="357.505" y="5.08" size="2.54" layer="94"/>
 </instance>
+<instance part="GND8" gate="1" x="48.26" y="60.96" smashed="yes">
+<attribute name="VALUE" x="45.72" y="58.42" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -12749,6 +12752,19 @@ Source: www.kingbright.com</description>
 <wire x1="246.38" y1="40.64" x2="248.92" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="248.92" y1="33.02" x2="248.92" y2="40.64" width="0.1524" layer="91"/>
 <junction x="248.92" y="33.02"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="CLKIN"/>
+<wire x1="53.34" y1="76.2" x2="48.26" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="GND8" gate="1" pin="GND"/>
+<wire x1="48.26" y1="76.2" x2="48.26" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="AD0"/>
+<wire x1="48.26" y1="71.12" x2="48.26" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="71.12" x2="48.26" y2="71.12" width="0.1524" layer="91"/>
+<junction x="48.26" y="71.12"/>
+<pinref part="U2" gate="G$1" pin="FSYNC"/>
+<wire x1="53.34" y1="63.5" x2="48.26" y2="63.5" width="0.1524" layer="91"/>
+<junction x="48.26" y="63.5"/>
 </segment>
 </net>
 <net name="+5V" class="1">
@@ -13172,6 +13188,14 @@ Source: www.kingbright.com</description>
 <wire x1="86.36" y1="86.36" x2="86.36" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="86.36" x2="91.44" y2="86.36" width="0.1524" layer="91"/>
 <junction x="86.36" y="86.36"/>
+<pinref part="U2" gate="G$1" pin="VLOGIC"/>
+<wire x1="83.82" y1="81.28" x2="86.36" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="81.28" x2="86.36" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="2"/>
+<wire x1="86.36" y1="78.74" x2="91.44" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="81.28" x2="86.36" y2="83.82" width="0.1524" layer="91"/>
+<junction x="86.36" y="81.28"/>
+<junction x="86.36" y="83.82"/>
 </segment>
 <segment>
 <pinref part="B1" gate="G$1" pin="3.3V"/>
@@ -13204,15 +13228,6 @@ Source: www.kingbright.com</description>
 <wire x1="86.36" y1="58.42" x2="86.36" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="86.36" y1="60.96" x2="91.44" y2="60.96" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$12" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="VLOGIC"/>
-<wire x1="83.82" y1="81.28" x2="86.36" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="81.28" x2="86.36" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="2"/>
-<wire x1="86.36" y1="78.74" x2="91.44" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$13" class="0">
