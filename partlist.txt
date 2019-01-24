@@ -1,0 +1,45 @@
+Partlist
+
+Exported from bitcoinChart.sch at 24.1.2019 17.10
+
+EAGLE Version 9.3.0 Copyright (c) 1988-2019 Autodesk, Inc.
+
+Assembly variant: 
+
+Part     Value                                Device                               Package                       Library           Sheet
+
+B1       ARDUINO_UNO_R3_SHIELDBASIC           ARDUINO_UNO_R3_SHIELDBASIC           UNO_R3_SHIELD                 SparkFun-Boards   1
+C1       2.2nF                                C-EUC1206K                           C1206K                        resistor          1
+C2       0.1uF                                C-EUC1206K                           C1206K                        resistor          1
+C3       10nF                                 C-EUC1206K                           C1206K                        resistor          1
+C4       0.1uF                                C-EUC1206K                           C1206K                        resistor          1
+C5       10uF                                 SMD-CAPACITOR0805                    C0805K                        basic_components  1
+C6       10uF                                 SMD-CAPACITOR0805                    C0805K                        basic_components  1
+D1       GREEN                                LEDCHIPLED_0805                      CHIPLED_0805                  led               1
+D2       RED                                  LEDCHIPLED_0805                      CHIPLED_0805                  led               1
+D3       1n4148                               DIODESOD-323                         SOD-323                       basic_components  1
+D4       1n4148                               DIODESOD-323                         SOD-323                       basic_components  1
+D5       MBR120                               DIODE-SCHOTTKYSOD-123                SOD-123                       basic_components  1
+D6       MBR120                               DIODE-SCHOTTKYSOD-123                SOD-123                       basic_components  1
+D17      RED                                  LED                                  LED_0805                      basic_components  1
+R1       150                                  R-EU_M1206                           M1206                         resistor          1
+R2       160                                  R-EU_M1206                           M1206                         resistor          1
+R3       10k                                  R-EU_M1206                           M1206                         resistor          1
+R4       10k                                  R-EU_M1206                           M1206                         resistor          1
+R5       10k                                  R-EU_M1206                           M1206                         resistor          1
+R6       10K                                  SMD-RESISTORR0805                    R0805                         basic_components  1
+R7       10K                                  SMD-RESISTORR0805                    R0805                         basic_components  1
+R8       10K                                  SMD-RESISTORR0805                    R0805                         basic_components  1
+R9       10K                                  SMD-RESISTORR0805                    R0805                         basic_components  1
+R10      1K                                   SMD-RESISTORR0805                    R0805                         basic_components  1
+R11      10K                                  SMD-RESISTORR0805                    R0805                         basic_components  1
+S1       MOMENTARY-SWITCH-SPST-SMD-6.2MM-TALL MOMENTARY-SWITCH-SPST-SMD-6.2MM-TALL TACTILE_SWITCH_SMD_6.2MM_TALL SparkFun-Switches 1
+S2       MOMENTARY-SWITCH-SPST-SMD-6.2MM-TALL MOMENTARY-SWITCH-SPST-SMD-6.2MM-TALL TACTILE_SWITCH_SMD_6.2MM_TALL SparkFun-Switches 1
+S3       MOMENTARY-SWITCH-SPST-SMD-6.2MM-TALL MOMENTARY-SWITCH-SPST-SMD-6.2MM-TALL TACTILE_SWITCH_SMD_6.2MM_TALL SparkFun-Switches 1
+SV1                                           FE10-1                               FE10                          untitled          1
+SW5      KMR2                                 BUTTON_KMR2KMR2                      BTN_KMR2                      basic_components  1
+SW6      KMR2                                 BUTTON_KMR2KMR2                      BTN_KMR2                      basic_components  1
+U$42     CONN-1X6                             CONN-1X6                             GHI-HEADERS_TH-1X6            basic_components  1
+U2       MPU-6050                             MPU-6050                             QFN50P400X400X95-24N          MPU-6050          1
+U7       SPX3819                              MIC5219SOT-23-5                      SOT-23-5                      basic_components  1
+U8                                            ESP12ESMD                            ESP12E-SMD                    basic_components  1
