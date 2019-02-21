@@ -18,10 +18,7 @@
 #define TFT_MOSI   11
 #define TFT_SCLK   13
 
-#define HEIGHT  128
-#define WIDTH   160
-
-#define YELLOW  0xF7E0
+#include "graph.h"
 
 #define arrayCount(a)   sizeof(a) / sizeof(a[0])
 
@@ -215,73 +212,6 @@ const float btcPrice[] =
     2985.4605
 };
 
-int smallest(float *a, int size)
-{
-    int index = 0;
-    float min = a[0];
-    
-    for (int i = 0; i < size; i++)
-    {
-        if (a[i] < min)
-        {
-            min = a[i];
-            index = i;
-        }
-    }
-    return index;
-}
-
-int largest(float *a, int size)
-{
-    int index = 0;
-    float max = a[0];
-    
-    for (int i = 0; i < size; i++)
-    {
-        if (a[i] > max)
-        {
-            max = a[i];
-            index = i;
-        }
-    }
-    return index;
-}
-
-void drawGraph(float *values)
-{
-    int smallestIndex = smallest(btcPrice, arrayCount(btcPrice));
-    int largestIndex = largest(btcPrice, arrayCount(btcPrice));
-    
-    for (int i = 0; i < arrayCount(btcPrice); i++)
-    {
-        Serial.println(btcPrice[i]);
-    }
-    Serial.print("Smallest: ");
-    Serial.println(btcPrice[smallestIndex]);
-    
-    Serial.print("Largest: ");
-    Serial.println(btcPrice[largestIndex]);
-    
-    
-    
-    
-    
-    int size = arrayCount(btcPrice);
-    int x0, y0, x, y;
-    
-    // difference between min and max values
-    float range = btcPrice[largestIndex] - btcPrice[smallestIndex];
-    for (int i = 0; i < size-1; i++)
-    {
-        x0 = (int)((float)WIDTH / (float)(size-1) * (float)i);
-        x =  (int)((float)WIDTH / (float)(size-1) * (float)(i+1));
-        
-        y0 = (int)((float)((btcPrice[largestIndex] - btcPrice[i]) / range) * (float)HEIGHT);
-        y =  (int)((float)((btcPrice[largestIndex] - btcPrice[i+1]) / range) * (float)HEIGHT);
-        
-        tft.drawLine(x0, y0, x, y, YELLOW);
-    }
-}
 
 void setup() 
 {
@@ -296,7 +226,10 @@ void setup()
     tft.fillScreen(ST7735_BLACK);
     tft.setRotation(1);      
     
-    drawGraph(btcPrice);
+    Graph *graph = new Graph(&tft);
+    graph->draw(btcPrice, arrayCount(btcPrice));
+    delete graph;
+    
 }
 
 void timerInit()
@@ -321,8 +254,3 @@ void loop()
 {
     
 }
-
-
-
-
-
